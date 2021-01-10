@@ -14,21 +14,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
 
         configureUI()
-        
-        
-        
-        
-        
-        
+   
     }
-    
 
-    
     
     func configureUI() {
         
@@ -48,11 +38,7 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
         
         showSearchBarButton(shouldShow: true)
-        
-        
-        
 
-        
     }
     
     @objc func handleShowSearchBar() {
@@ -95,13 +81,9 @@ extension ViewController: UISearchBarDelegate {
         self.players = []
         let request = RequestPlayerData()
         let playerToSearch = searchBar.searchTextField.text!
-
+        
         request.getPlayersSearchData(search: playerToSearch) { (result) in
             try? result.get().data?.forEach {
-//                guard let common = $0.common_name else {return}
-//                guard let display = $0.display_name else {return}
-//                print(common)
-//                print(display)
                 self.players.append(Player(player_id: $0.player_id, team_id: $0.team_id, country_id: $0.country_id, position_id: $0.position_id, common_name: $0.common_name, display_name: $0.display_name, fullname: $0.fullname, firstname: $0.firstname, lastname: $0.lastname, nationality: $0.nationality, birthdate: $0.birthdate, birthcountry: $0.birthcountry, birthplace: $0.birthplace, height: $0.height, weight: $0.weight, image_path: $0.image_path))
                 
             }
