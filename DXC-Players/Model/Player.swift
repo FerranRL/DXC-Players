@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player: Codable {
+struct Player: Decodable {
     var player_id: Int?
     var team_id: Int?
     var country_id: Int?
@@ -24,4 +24,8 @@ struct Player: Codable {
     var height: String?
     var weight: String?
     var image_path: String?
+}
+
+struct Data: Decodable {
+    var data:[Player]?
 }
