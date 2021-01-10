@@ -8,20 +8,20 @@
 import Foundation
 
 struct Player: Codable {
-    var player_id: Int!
-    var team_id: Int!
-    var country_id: Int!
-    var position_id: Int!
-    var common_name: String!
-    var display_name: String!
-    var fullname: String!
-    var firstname: String!
-    var lastname: String!
-    var nationality: String!
-    var birthdate: String!
-    var birthcountry: String!
+    var player_id: Int?
+    var team_id: Int?
+    var country_id: Int?
+    var position_id: Int?
+    var common_name: String?
+    var display_name: String?
+    var fullname: String?
+    var firstname: String?
+    var lastname: String?
+    var nationality: String?
+    var birthdate: String?
+    var birthcountry: String?
     var birthplace: String?
     var height: String?
     var weight: String?
-    var image_path: String!
+    var image_path: String?
 }
