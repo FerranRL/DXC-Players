@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A26DC2425AB805E003F2C3B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26DC2325AB805E003F2C3B /* UIView+Ext.swift */; };
+		7A26DC2C25AB83A7003F2C3B /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26DC2B25AB83A7003F2C3B /* PlayerCell.swift */; };
 		7A95088525AAF28F0060E1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A95088425AAF28F0060E1AD /* AppDelegate.swift */; };
 		7A95088725AAF28F0060E1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A95088625AAF28F0060E1AD /* SceneDelegate.swift */; };
 		7A95088925AAF28F0060E1AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A95088825AAF28F0060E1AD /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A26DC2325AB805E003F2C3B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		7A26DC2B25AB83A7003F2C3B /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		7A95088125AAF28F0060E1AD /* DXC-Players.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DXC-Players.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A95088425AAF28F0060E1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A95088625AAF28F0060E1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		7A26DC2225AB8028003F2C3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A26DC2325AB805E003F2C3B /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7A95087825AAF28F0060E1AD = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 		7A95088325AAF28F0060E1AD /* DXC-Players */ = {
 			isa = PBXGroup;
 			children = (
+				7A26DC2225AB8028003F2C3B /* Extensions */,
 				7A26DC1825AB46AC003F2C3B /* StoryBoards */,
 				7A9508BA25AAF4D90060E1AD /* Model */,
 				7A95088425AAF28F0060E1AD /* AppDelegate.swift */,
@@ -119,6 +132,7 @@
 				7A95088D25AAF2910060E1AD /* Assets.xcassets */,
 				7A95088F25AAF2910060E1AD /* LaunchScreen.storyboard */,
 				7A95089225AAF2910060E1AD /* Info.plist */,
+				7A26DC2B25AB83A7003F2C3B /* PlayerCell.swift */,
 			);
 			path = "DXC-Players";
 			sourceTree = "<group>";
@@ -282,6 +296,8 @@
 			files = (
 				7A9508BC25AAF4FF0060E1AD /* Player.swift in Sources */,
 				7A95088925AAF28F0060E1AD /* ViewController.swift in Sources */,
+				7A26DC2C25AB83A7003F2C3B /* PlayerCell.swift in Sources */,
+				7A26DC2425AB805E003F2C3B /* UIView+Ext.swift in Sources */,
 				7A95088525AAF28F0060E1AD /* AppDelegate.swift in Sources */,
 				7A9508C125AAF8AF0060E1AD /* RequestPlayerData.swift in Sources */,
 				7A95088725AAF28F0060E1AD /* SceneDelegate.swift in Sources */,

@@ -11,12 +11,32 @@ class ViewController: UIViewController {
     
     var players: [Player]! = []
     let searchBar = UISearchBar()
-
+    var tableView = UITableView()
+    
+    struct Cells {
+        static let playerCells = "PlayerCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        ConfigureTableView()
    
+    }
+    
+    func ConfigureTableView() {
+        view.addSubview(tableView)
+        setTableViewDelegates()
+        tableView.rowHeight = 80
+        tableView.register(PlayerCell.self, forCellReuseIdentifier: Cells.playerCells)
+        tableView.pin(to: view)
+        
+    }
+    
+    func setTableViewDelegates() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     
@@ -89,8 +109,26 @@ extension ViewController: UISearchBarDelegate {
             }
             print(self.players!)
             searchBar.searchTextField.text = ""
+            self.tableView.reloadData()
         }
     }
+    
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(players.count)
+        return players.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.playerCells) as! PlayerCell
+        
+        
+        return UITableViewCell()
+    }
+    
     
 }
 
