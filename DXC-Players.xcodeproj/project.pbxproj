@@ -15,6 +15,7 @@
 		7A95089125AAF2910060E1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A95088F25AAF2910060E1AD /* LaunchScreen.storyboard */; };
 		7A95089C25AAF2920060E1AD /* DXC_PlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A95089B25AAF2920060E1AD /* DXC_PlayersTests.swift */; };
 		7A9508A725AAF2920060E1AD /* DXC_PlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9508A625AAF2920060E1AD /* DXC_PlayersUITests.swift */; };
+		7A9508BC25AAF4FF0060E1AD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9508BB25AAF4FE0060E1AD /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7A9508A225AAF2920060E1AD /* DXC-PlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DXC-PlayersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9508A625AAF2920060E1AD /* DXC_PlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXC_PlayersUITests.swift; sourceTree = "<group>"; };
 		7A9508A825AAF2920060E1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9508BB25AAF4FE0060E1AD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		7A95088325AAF28F0060E1AD /* DXC-Players */ = {
 			isa = PBXGroup;
 			children = (
+				7A9508BA25AAF4D90060E1AD /* Model */,
 				7A95088425AAF28F0060E1AD /* AppDelegate.swift */,
 				7A95088625AAF28F0060E1AD /* SceneDelegate.swift */,
 				7A95088825AAF28F0060E1AD /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				7A9508A825AAF2920060E1AD /* Info.plist */,
 			);
 			path = "DXC-PlayersUITests";
+			sourceTree = "<group>";
+		};
+		7A9508BA25AAF4D90060E1AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A9508BB25AAF4FE0060E1AD /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9508BC25AAF4FF0060E1AD /* Player.swift in Sources */,
 				7A95088925AAF28F0060E1AD /* ViewController.swift in Sources */,
 				7A95088525AAF28F0060E1AD /* AppDelegate.swift in Sources */,
 				7A95088725AAF28F0060E1AD /* SceneDelegate.swift in Sources */,
@@ -446,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paretsdesign.DXC-Players";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paretsdesign.DXC-Players";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
