@@ -124,9 +124,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.playerCells) as! PlayerCell
+        let player = players[indexPath.row]
+        cell.set(player: player)
         
-        
-        return UITableViewCell()
+        return cell
     }
     
     

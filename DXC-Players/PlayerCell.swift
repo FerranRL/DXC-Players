@@ -31,6 +31,49 @@ class PlayerCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
+    func set(player: Player) {
+        
+        let urlString = player.image_path!
+        let url = URL(string: urlString)!
+        
+        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+            if let data = data {
+                
+                DispatchQueue.main.async {
+                    self?.playerImageView.image = UIImage(data: data)
+                }
+                
+                
+            }
+        }
+        
+        dataTask.resume()
+        
+        playerNameLabel.text = player.display_name ?? ""
+
+        let dob = player.birthdate ?? ""
+
+        let myFormatte = DateFormatter()
+        myFormatte.dateFormat = "dd-MM-yyyy"
+        let finalDate : Date = myFormatte.date(from: dob) ?? Date()
+        let now = Date()
+        let calendar = Calendar.current
+        let ageComponents = calendar.dateComponents([.year], from: finalDate, to: now)
+        print("Age is \(ageComponents.year!)")
+        
+        if ageComponents.year == 0 {
+            playerAgeLabel.text = "No consta fecha de nacimiento"
+        } else {
+            playerAgeLabel.text = "\(ageComponents.year!) años"
+        }
+        
+        
+
+        
+    }
+    
     func configureImageView() {
         playerImageView.layer.cornerRadius = 25
         playerImageView.clipsToBounds = true
@@ -69,3 +112,5 @@ class PlayerCell: UITableViewCell {
     }
     
 }
+
+
